@@ -24,15 +24,20 @@ const routes: Routes = [
         loadChildren: () => import('../cadastro/cadastro.module').then(m => m.CadastroPageModule)
       },
       {
-        path: '',
-        redirectTo: '/tabs/tabVeiculo',
+        path: 'tabLogin',
+        loadChildren: () => import('../login/login.module').then(m => m.LoginPageModule)
+      },
+      {
+        path: 'tabLogin',
+        redirectTo: '/tabs/tabLogin',
         pathMatch: 'full'
       }
+      
     ]
   },
   {
-    path: '',
-    redirectTo: '/tabs/tabVeiculo',
+    path: 'tabLogin',
+    redirectTo: '/tabs/tabLogin',
     pathMatch: 'full'
   }
 ];

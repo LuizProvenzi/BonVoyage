@@ -20,24 +20,20 @@ const routes: Routes = [
         loadChildren: () => import('../alertas/alertas.module').then(m => m.AlertasPageModule)
       },
       {
-        path: 'tabCadastro',
-        loadChildren: () => import('../cadastro/cadastro.module').then(m => m.CadastroPageModule)
+        path: 'tabJogar',
+        loadChildren: () => import('../jogar/jogar.module').then(m => m.JogarPageModule)
       },
       {
-        path: 'tabLogin',
-        loadChildren: () => import('../login/login.module').then(m => m.LoginPageModule)
-      },
-      {
-        path: 'tabLogin',
-        redirectTo: '/tabs/tabLogin',
+        path: '',
+        redirectTo: '/tabs/tabVeiculo',
         pathMatch: 'full'
       }
       
     ]
   },
   {
-    path: 'tabLogin',
-    redirectTo: '/tabs/tabLogin',
+    path: '',
+    redirectTo: '/tabs/tabVeiculo',
     pathMatch: 'full'
   }
 ];

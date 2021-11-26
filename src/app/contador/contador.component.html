@@ -1,0 +1,15 @@
+<ion-card>
+    <ion-tem>
+        <ion-label class="ion-text-wrap">
+            <ion-text color="dark"><h3>{{Name}}</h3></ion-text>
+        </ion-label>
+    </ion-tem>
+
+    <ion-card-content class="contadores">
+        <ion-icon size="large" color="danger" name="remove-circle" (click)="decrement()" class="btn_menos"></ion-icon>
+        <ion-label class="ion-text-wrap">
+            <ion-text color="dark"><h2>{{Score}}</h2></ion-text>
+        </ion-label>
+        <ion-icon size="large" color="sucess" name="add-circle" (click)="increment()" class=btn_mais></ion-icon>
+    </ion-card-content>
+</ion-card>

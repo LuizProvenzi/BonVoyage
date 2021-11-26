@@ -4,21 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { VeiculoPageRoutingModule } from './veiculo-routing.module';
+import { CadastroVeiculoPageRoutingModule } from './cadastro-veiculo-routing.module';
 
-import { VeiculoPage } from './veiculo.page';
-
-
+import { CadastroVeiculoPage } from './cadastro-veiculo.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    VeiculoPageRoutingModule,
-    
-  
+    CadastroVeiculoPageRoutingModule
   ],
-  declarations: [VeiculoPage]
+  declarations: [CadastroVeiculoPage]
 })
-export class VeiculoPageModule {}
+export class CadastroVeiculoPageModule {}

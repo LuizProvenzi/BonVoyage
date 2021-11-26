@@ -19,13 +19,13 @@ const routes: Routes = [
     loadChildren: () => import('./alertas/alertas.module').then( m => m.AlertasPageModule)
   },
   {
-    path: 'cadastro',
-    loadChildren: () => import('./cadastro/cadastro.module').then( m => m.CadastroPageModule)
+    path: 'cadastro-veiculo',
+    loadChildren: () => import('./cadastro-veiculo/cadastro-veiculo.module').then( m => m.CadastroVeiculoPageModule)
   },
   {
-    path: 'login',
-    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
-  }
+    path: 'jogar',
+    loadChildren: () => import('./jogar/jogar.module').then( m => m.JogarPageModule)
+  },
 ];
 @NgModule({
   imports: [

@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-title>Veiculos</ion-title>
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-input type="text" (ionInput)="updateNewVeiculo($event.target.value)" placeholder="Novo Veiculo" value={{NovoVeiculo}}></ion-input>
+        <ion-button  (click)="addVeiculo()" color="dark" size="large" fill="clear" item-right>
+            <ion-icon name="add-circle-outline"></ion-icon>
+        </ion-button>
+  </ion-item>
+
+  <app-card *ngFor="let v of veiculos | async" Id={{v.Id}} Odometro={{v.Odometro}} OdometroOleo={{v.OdometroOleo}} OdometroCheckup={{v.OdometroCheckup}} Placa={{v.Placa}}></app-card>
+  
+  <div class="user-meta ion-text-center">
+    <h6>Informações gerais:</h6>
+    <h7>A duração do óleo sintético é de 10.000 km</h7><br>
+    <h7>A duração do óleo mineral é de 5.000 km</h7><br>
+    <h7>A revisão geral deve ser feita a cada 10.000 km</h7><br>
+    <h7>O balaceamento deve ser feito a cada 10.000 km</h7><br>
+    <h7>A troca dos filtros deve ser feita a cada 15.000 km</h7><br>
+    <h7>A duração do fluído do freio é de 20.000 km</h7><br>
+    <h7>A duração das velas de ignição é de 20.000 km</h7>
+  </div>
+</ion-content>
+
+

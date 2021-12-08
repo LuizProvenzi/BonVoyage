@@ -8,32 +8,23 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'tabVeiculo',
-        loadChildren: () => import('../veiculo/veiculo.module').then(m => m.VeiculoPageModule)
+        path: 'tabVeiculos',
+        loadChildren: () => import('../veiculos/veiculos.module').then(m => m.VeiculosPageModule)
       },
       {
         path: 'tabTimeline',
         loadChildren: () => import('../timeline/timeline.module').then(m => m.TimelinePageModule)
       },
       {
-        path: 'tabAlertas',
-        loadChildren: () => import('../alertas/alertas.module').then(m => m.AlertasPageModule)
-      },
-      {
-        path: 'tabJogar',
-        loadChildren: () => import('../jogar/jogar.module').then(m => m.JogarPageModule)
-      },
-      {
         path: '',
-        redirectTo: '/tabs/tabVeiculo',
+        redirectTo: '/tabs/tabVeiculos',
         pathMatch: 'full'
       }
-      
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tabVeiculo',
+    redirectTo: '/tabs/tabVeiculos',
     pathMatch: 'full'
   }
 ];

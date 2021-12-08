@@ -4,11 +4,11 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ContadorComponent } from '../contador/contador.component';
+import { CardComponent } from '../card/card.component';
 
 @NgModule({
     imports: [CommonModule, FormsModule, IonicModule],
-    declarations: [ContadorComponent],
-    exports: [ContadorComponent]
+    declarations: [CardComponent],
+    exports: [CardComponent]
 })
 export class ComponentsModule {}

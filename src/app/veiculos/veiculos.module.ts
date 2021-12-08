@@ -4,10 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { JogarPageRoutingModule } from './jogar-routing.module';
+import { VeiculosPageRoutingModule } from './veiculos-routing.module';
 
-import { JogarPage } from './jogar.page';
-
+import { VeiculosPage } from './veiculos.page';
 import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
@@ -15,10 +14,9 @@ import { ComponentsModule } from '../components/components.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    JogarPageRoutingModule,
+    VeiculosPageRoutingModule,
     ComponentsModule
   ],
-  declarations: [JogarPage]
+  declarations: [VeiculosPage]
 })
-export class JogarPageModule {}
-
+export class VeiculosPageModule {}

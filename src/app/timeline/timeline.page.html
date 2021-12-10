@@ -1,9 +1,20 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>timeline</ion-title>
+  <ion-toolbar color="primary">
+      <ion-title>Timeline</ion-title>
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+      </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-item>
+    <ion-input type="text" (ionInput)="updateNewInfo($event.target.value)" placeholder="Adicionar informação" value={{NovaInfo}}></ion-input>
+        <ion-button  (click)="addInfo()" color="dark" size="large" fill="clear" item-right>
+            <ion-icon name="add-circle-outline"></ion-icon>
+        </ion-button>
+  </ion-item>
 
-</ion-content>
+  <app-info *ngFor="let t of timelines | async" Id={{t.Id}} Info={{t.info}}></app-info>
+
+  </ion-content>

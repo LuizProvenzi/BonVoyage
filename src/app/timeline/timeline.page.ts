@@ -36,7 +36,7 @@ export class TimelinePage implements OnInit {
   }
 
 
-  removerInfo() {
+  remover() {
     console.log("TESTE");
   }
 

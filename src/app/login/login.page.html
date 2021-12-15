@@ -1,0 +1,22 @@
+<ion-content>
+    <div class="card">
+        <div class="header"></div>
+
+        <div class="body">
+            <ion-toolbar>
+                <ion-item>
+                    <ion-label position="floating">E-mail</ion-label>
+                    <ion-input type="email" [(ngModel)]="Email"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label position="floating">Senha</ion-label>
+                    <ion-input type="password" [(ngModel)]="Password"></ion-input>
+                </ion-item>
+            </ion-toolbar>
+
+            <ion-button class="btn" color="primary" (click)="login()" expand="block">Entrar</ion-button>
+        </div>
+
+    </div>
+</ion-content>

@@ -7,6 +7,7 @@ import { AngularFirestoreCollection } from 'angularfire2/firestore';
 interface Timeline {
   Id: number;
   Info: string;
+  Custo: number;
 }
 
 @Component({
@@ -26,7 +27,7 @@ export class InfoComponent implements OnInit {
   }
 
 
-  removerInfo() {
+  remover() {
     this.timelineCollectionRef.get().subscribe((snapshot) => {
       snapshot.forEach(doc => {
         if (doc.data().Id == this.Id)

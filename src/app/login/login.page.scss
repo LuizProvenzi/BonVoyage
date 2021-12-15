@@ -1,0 +1,13 @@
+.card {
+    .header {
+        height: 300px;
+    }
+    .body {
+        background-color: transparentize($color: #faf6f6, $amount: 1);
+        padding: 30px;
+        height: 450px !important;
+        .btn {
+            height: 50px;
+        }
+    }
+}

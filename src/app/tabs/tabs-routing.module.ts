@@ -16,15 +16,19 @@ const routes: Routes = [
         loadChildren: () => import('../timeline/timeline.module').then(m => m.TimelinePageModule)
       },
       {
+        path: 'tabLogin',
+        loadChildren: () => import('../login/login.module').then(m => m.LoginPageModule)
+      },
+      {
         path: '',
-        redirectTo: '/tabs/tabVeiculos',
+        redirectTo: '/tabs/tabLogin',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tabVeiculos',
+    redirectTo: '/tabs/tabLogin',
     pathMatch: 'full'
   }
 ];

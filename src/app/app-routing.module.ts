@@ -14,6 +14,10 @@ const routes: Routes = [
     path: 'timeline',
     loadChildren: () => import('./timeline/timeline.module').then( m => m.TimelinePageModule)
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
 ];
 @NgModule({
   imports: [
